@@ -25,9 +25,7 @@ class MainActivity : AppCompatActivity() {
 
             if (editText1.getText().toString().equals("") || editText2.getText().toString().equals("")) {
                 Snackbar.make(it, "数字を入力してください", Snackbar.LENGTH_LONG)
-                    .setAction("Action") {
-                        Log.d("UI~PARTS", "数字を入力してください")
-                    }.show()
+                    .show()
             } else {
                 Log.d("kotlintest", (num1!! + num2!!).toString())
                 val intent = Intent(this, SecondActivity::class.java)
@@ -46,9 +44,7 @@ class MainActivity : AppCompatActivity() {
 
             if (editText1.getText().toString().equals("") || editText2.getText().toString().equals("")) {
                 Snackbar.make(it, "数字を入力してください", Snackbar.LENGTH_LONG)
-                    .setAction("Action") {
-                        Log.d("UI~PARTS", "数字を入力してください")
-                    }.show()
+            .show()
             } else {
                 Log.d("kotlintest", (num1!! + num2!!).toString())
                 val intent = Intent(this, SecondActivity::class.java)
@@ -66,9 +62,7 @@ class MainActivity : AppCompatActivity() {
 
             if (editText1.getText().toString().equals("") || editText2.getText().toString().equals("")) {
                 Snackbar.make(it, "数字を入力してください", Snackbar.LENGTH_LONG)
-                    .setAction("Action") {
-                        Log.d("UI~PARTS", "数字を入力してください")
-                    }.show()
+                    .show()
             } else {
                 Log.d("kotlintest", (num1!! + num2!!).toString())
                 val intent = Intent(this, SecondActivity::class.java)
@@ -86,9 +80,7 @@ class MainActivity : AppCompatActivity() {
 
             if (editText1.getText().toString().equals("") || editText2.getText().toString().equals("")) {
                 Snackbar.make(it, "数字を入力してください", Snackbar.LENGTH_LONG)
-                    .setAction("Action") {
-                        Log.d("UI~PARTS", "数字を入力してください")
-                    }.show()
+                    .show()
             } else {
                 Log.d("kotlintest", (num1!! + num2!!).toString())
                 val intent = Intent(this, SecondActivity::class.java)
@@ -97,6 +89,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+
     }
 }
-
