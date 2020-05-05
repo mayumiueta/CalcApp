@@ -23,23 +23,18 @@ class MainActivity : AppCompatActivity() {
             val num1 = editText1.text.toString().toFloatOrNull()
             val num2 = editText2.text.toString().toFloatOrNull()
 
- if
-         (editText1.getText().toString().equals("")||(editText2.getText().toString().equals(""){
-
-                view -> Snackbar.make (view, "数字を入力してください",Snackbar.Length_LONG)
-            .setAction("Action"){
-                Log.d("UI~PARTS",  "数字を入力してください")
-            }.show()
-
-        } else {
-            Log.d("kotlintest", (num1!! + num2!!).toString() )
-
-            val intent = Intent(this, SecondActivity::class.java)
-            intent.putExtra("VALUE",(num1!! + num2!!).toString())
-            startActivity(intent)
+            if (editText1.getText().toString().equals("") || editText2.getText().toString().equals("")) {
+                Snackbar.make(it, "数字を入力してください", Snackbar.LENGTH_LONG)
+                    .setAction("Action") {
+                        Log.d("UI~PARTS", "数字を入力してください")
+                    }.show()
+            } else {
+                Log.d("kotlintest", (num1!! + num2!!).toString())
+                val intent = Intent(this, SecondActivity::class.java)
+                intent.putExtra("VALUE", (num1!! + num2!!).toString())
+                startActivity(intent)
+            }
         }
-        }
-
 
 
         button2.setOnClickListener {
@@ -49,11 +44,17 @@ class MainActivity : AppCompatActivity() {
             val num1 = editText1.text.toString().toFloatOrNull()
             val num2 = editText2.text.toString().toFloatOrNull()
 
-            Log.d("kotlintest", (num1!! - num2!!).toString() )
-
-            val intent = Intent(this, SecondActivity::class.java)
-            intent.putExtra("VALUE",(num1!! - num2!!).toString())
-            startActivity(intent)
+            if (editText1.getText().toString().equals("") || editText2.getText().toString().equals("")) {
+                Snackbar.make(it, "数字を入力してください", Snackbar.LENGTH_LONG)
+                    .setAction("Action") {
+                        Log.d("UI~PARTS", "数字を入力してください")
+                    }.show()
+            } else {
+                Log.d("kotlintest", (num1!! + num2!!).toString())
+                val intent = Intent(this, SecondActivity::class.java)
+                intent.putExtra("VALUE", (num1!! - num2!!).toString())
+                startActivity(intent)
+            }
         }
 
         button3.setOnClickListener {
@@ -63,11 +64,17 @@ class MainActivity : AppCompatActivity() {
             val num1 = editText1.text.toString().toFloatOrNull()
             val num2 = editText2.text.toString().toFloatOrNull()
 
-            Log.d("kotlintest", (num1!! * num2!!).toString() )
-
-            val intent = Intent(this, SecondActivity::class.java)
-            intent.putExtra("VALUE",(num1!! * num2!!).toString())
-            startActivity(intent)
+            if (editText1.getText().toString().equals("") || editText2.getText().toString().equals("")) {
+                Snackbar.make(it, "数字を入力してください", Snackbar.LENGTH_LONG)
+                    .setAction("Action") {
+                        Log.d("UI~PARTS", "数字を入力してください")
+                    }.show()
+            } else {
+                Log.d("kotlintest", (num1!! + num2!!).toString())
+                val intent = Intent(this, SecondActivity::class.java)
+                intent.putExtra("VALUE", (num1!! * num2!!).toString())
+                startActivity(intent)
+            }
         }
 
         button4.setOnClickListener {
@@ -77,20 +84,19 @@ class MainActivity : AppCompatActivity() {
             val num1 = editText1.text.toString().toFloatOrNull()
             val num2 = editText2.text.toString().toFloatOrNull()
 
-            Log.d("kotlintest", (num1!! / num2!!).toString() )
-
-            val intent = Intent(this, SecondActivity::class.java)
-            intent.putExtra("VALUE",(num1!! / num2!!).toString())
-            startActivity(intent)
+            if (editText1.getText().toString().equals("") || editText2.getText().toString().equals("")) {
+                Snackbar.make(it, "数字を入力してください", Snackbar.LENGTH_LONG)
+                    .setAction("Action") {
+                        Log.d("UI~PARTS", "数字を入力してください")
+                    }.show()
+            } else {
+                Log.d("kotlintest", (num1!! + num2!!).toString())
+                val intent = Intent(this, SecondActivity::class.java)
+                intent.putExtra("VALUE", (num1!! / num2!!).toString())
+                startActivity(intent)
+            }
         }
 
     }
-    }
+}
 
-
-/*
-2つのEditTextから文字列を取得
-1で取得した2つの文字列を小数に変換
-2で変換した数値を計算
-計算した値を SecondActivityに渡して画面遷移
-*/

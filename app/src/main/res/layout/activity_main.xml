@@ -9,14 +9,16 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="phone"
+        android:inputType="number"
+        android:digits="0123456789"
         android:id="@+id/editText1"/>
 
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="phone"
+            android:inputType="number"
+            android:digits="0123456789"
             android:id="@+id/editText2"/>
 
 <LinearLayout
