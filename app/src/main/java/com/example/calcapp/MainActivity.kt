@@ -5,24 +5,31 @@ import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import android.content.Intent
+import android.util.Log
 
-class MainActivity : AppCompatActivity() , View.OnClickListener{
+
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        button1.setOnClickListener (this)
+        button1.setOnClickListener {
+            Log.d("kotlintest", editText1.text.toString())
+            Log.d("kotlintest", editText2.text.toString())
 
-        button2.setOnClickListener (this)
+            val num1 = editText1.text.toString().toFloatOrNull()
+            val num2 = editText2.text.toString().toFloatOrNull()
 
-        button3.setOnClickListener (this)
-
-        button4.setOnClickListener (this)
+            Log.d("kotlintest", (num1!! + num2!!).toString() )
+        }
+    }
     }
 
-    override fun onClick(v: View?) {
-        val intent = Intent (this, SecondActivity::class.java)
-        startActivity(intent)
-    }
-}
+
+/*
+2つのEditTextから文字列を取得
+1で取得した2つの文字列を小数に変換
+2で変換した数値を計算
+計算した値を SecondActivityに渡して画面遷移
+*/
