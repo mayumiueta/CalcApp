@@ -27,6 +27,48 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("VALUE",(num1!! + num2!!).toString())
             startActivity(intent)
         }
+
+        button2.setOnClickListener {
+            Log.d("kotlintest", editText1.text.toString())
+            Log.d("kotlintest", editText2.text.toString())
+
+            val num1 = editText1.text.toString().toFloatOrNull()
+            val num2 = editText2.text.toString().toFloatOrNull()
+
+            Log.d("kotlintest", (num1!! - num2!!).toString() )
+
+            val intent = Intent(this, SecondActivity::class.java)
+            intent.putExtra("VALUE",(num1!! - num2!!).toString())
+            startActivity(intent)
+        }
+
+        button3.setOnClickListener {
+            Log.d("kotlintest", editText1.text.toString())
+            Log.d("kotlintest", editText2.text.toString())
+
+            val num1 = editText1.text.toString().toFloatOrNull()
+            val num2 = editText2.text.toString().toFloatOrNull()
+
+            Log.d("kotlintest", (num1!! * num2!!).toString() )
+
+            val intent = Intent(this, SecondActivity::class.java)
+            intent.putExtra("VALUE",(num1!! * num2!!).toString())
+            startActivity(intent)
+        }
+
+        button4.setOnClickListener {
+            Log.d("kotlintest", editText1.text.toString())
+            Log.d("kotlintest", editText2.text.toString())
+
+            val num1 = editText1.text.toString().toFloatOrNull()
+            val num2 = editText2.text.toString().toFloatOrNull()
+
+            Log.d("kotlintest", (num1!! / num2!!).toString() )
+
+            val intent = Intent(this, SecondActivity::class.java)
+            intent.putExtra("VALUE",(num1!! / num2!!).toString())
+            startActivity(intent)
+        }
     }
     }
 

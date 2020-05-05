@@ -11,8 +11,8 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        val value = intent.getStringExtra("VALUE",(num1!! + num2!!).toString())
+        val value = intent.getStringExtra("VALUE")
 
-        textView.text = "VALUE"
+        textView.text = value
 }
 }
