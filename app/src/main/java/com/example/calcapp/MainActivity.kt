@@ -5,7 +5,8 @@ import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import android.content.Intent
-import android.util.Log
+import android.support.design.widget.Snackbar
+import android. util.Log
 
 
 class MainActivity : AppCompatActivity() {
@@ -15,18 +16,31 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         button1.setOnClickListener {
+
             Log.d("kotlintest", editText1.text.toString())
             Log.d("kotlintest", editText2.text.toString())
 
             val num1 = editText1.text.toString().toFloatOrNull()
             val num2 = editText2.text.toString().toFloatOrNull()
 
+ if
+         (editText1.getText().toString().equals("")||(editText2.getText().toString().equals(""){
+
+                view -> Snackbar.make (view, "数字を入力してください",Snackbar.Length_LONG)
+            .setAction("Action"){
+                Log.d("UI~PARTS",  "数字を入力してください")
+            }.show()
+
+        } else {
             Log.d("kotlintest", (num1!! + num2!!).toString() )
 
             val intent = Intent(this, SecondActivity::class.java)
             intent.putExtra("VALUE",(num1!! + num2!!).toString())
             startActivity(intent)
         }
+        }
+
+
 
         button2.setOnClickListener {
             Log.d("kotlintest", editText1.text.toString())
@@ -69,6 +83,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("VALUE",(num1!! / num2!!).toString())
             startActivity(intent)
         }
+
     }
     }
 
