@@ -22,6 +22,10 @@ class MainActivity : AppCompatActivity() {
             val num2 = editText2.text.toString().toFloatOrNull()
 
             Log.d("kotlintest", (num1!! + num2!!).toString() )
+
+            val intent = Intent(this, SecondActivity::class.java)
+            intent.putExtra("VALUE",(num1!! + num2!!).toString())
+            startActivity(intent)
         }
     }
     }
